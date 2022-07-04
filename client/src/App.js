@@ -3,7 +3,6 @@ import { increment } from './redux/slices/goldSlice';
 import laughing_man from './laughing_man.svg'
 import './App.css';
 
-import Navbar from './components/Navbar';
 import Resources from './components/Resources';
 
 function App() {
