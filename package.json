@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "server": "cd server && npm run start",
-    "client": "cd client && npm run start"
+    "client": "cd client && npm run start",
+    "start": "node server/index.js",
+    "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "author": "Michael Cohen",
   "license": "ISC"
