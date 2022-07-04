@@ -10,7 +10,7 @@ app.get('/api', function (req, res) {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile('index.html');
+  res.sendFile('index.html', { root: path.join(__dirname, '../client/build') });
 })
 
 const PORT = process.env.PORT || 5050;
