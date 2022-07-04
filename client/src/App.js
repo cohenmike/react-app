@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
+import { increment } from './redux/slices/goldSlice';
+import laughing_man from './laughing_man.svg'
 import './App.css';
 
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
+import Resources from './components/Resources';
 
 function App() {
+  const dispatch = useDispatch();
   return (
     <div className="App">
-      <Navbar />
+      <Resources />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="logo-container" onClick={() => dispatch(increment())}>
+          <img src={laughing_man} className="App-logo" alt="logo" />
+        </div>
       </header>
     </div>
   );

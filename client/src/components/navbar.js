@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <button onClick={() => setIsDisabled(!isDisabled)}>Enable/Disable</button>
+            <button onClick={() => setIsDisabled(!isDisabled)}>{isDisabled ? "Enable" : "Disable"}</button>
             <input type="text" disabled={isDisabled}></input>
             <button onClick={handleServer}>Server</button>
             <span>{serverText}</span>

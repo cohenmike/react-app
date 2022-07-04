@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cd server && npm run start",
+    "server": "cd server && npm run dev",
     "client": "cd client && npm run start",
     "start": "cd server && npm i && node index.js",
     "heroku-postbuild": "cd client && npm i && npm run build"
