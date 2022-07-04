@@ -6,7 +6,7 @@
   "scripts": {
     "server": "cd server && npm run start",
     "client": "cd client && npm run start",
-    "start": "cd client && npm i && node server/index.js",
+    "start": "cd server && npm i && node index.js",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "author": "Michael Cohen",
