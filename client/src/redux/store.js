@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import goldReducer from "./slices/goldSlice";
+import producerReducer from "./slices/producerSlice";
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
@@ -10,10 +11,11 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-  gold: goldReducer
+  gold: goldReducer,
+  producer: producerReducer
 })
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,

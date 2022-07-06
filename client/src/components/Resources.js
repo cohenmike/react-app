@@ -1,15 +1,15 @@
-import {React, useState} from "react";
-import { useSelector } from 'react-redux';
+import {React, useState, useEffect} from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import { selectGold } from "../redux/slices/goldSlice";
-import "./Resources.css"
+import styles from "./Resources.module.css"
 
 const Resources = () => {
     const gold = useSelector(selectGold);
 
     return (
-        <div className="container">
-            <span className="item">Gems: 0</span>
-            <span className="item">Gold: {gold}</span>
+        <div className={styles.container}>
+            <span className={styles.item}>Gems: 0</span>
+            <span className={styles.item}>Gold: {Math.floor(gold)}</span>
         </div>
     );
 };
