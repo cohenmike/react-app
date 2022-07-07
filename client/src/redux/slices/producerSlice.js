@@ -5,7 +5,12 @@ export const producerSlice = createSlice({
   initialState: {
     value: {
       1: 0,
-      2: 0
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0,
+      7: 0
     },
   },
   reducers: {

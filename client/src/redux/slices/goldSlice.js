@@ -7,10 +7,10 @@ export const goldSlice = createSlice({
   },
   reducers: {
     incrementByAmount: (state, action) => {
-      state.value += action.payload
+      state.value += Number(action.payload)
     },
     decrementByAmount: (state, action) => {
-      state.value -= action.payload
+      state.value -= Number(action.payload)
     },
   },
 })
