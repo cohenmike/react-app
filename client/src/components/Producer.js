@@ -20,7 +20,7 @@ const Producer = ({producer}) => {
         <div className={styles.container} onClick={handleClick}>
             <div>Name: {producer.name}</div>
             <div>Cost: {producer.cost}</div>
-            <div>Owned: {producers[producer.id]}</div>
+            <div>Owned: {producers[producer.id] ?? 0}</div>
         </div>
     );
 };
